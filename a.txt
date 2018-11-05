@@ -1,0 +1,28 @@
+wifi：tjf0-8e4p-ix5u
+windows+R   mstsc
+
+cd C:\Program Files\MySQL\mysql-5.6.36-win32\bin
+安装服务 执行命令：mysqld install  
+启动服务 执行命令：net start mysql
+运行mysql 执行命令：mysql -uroot -p
+登陆后可以修改密码，执行命令：set password for root@localhost=password('你的密码');
+
+SHOW DATABASES;
+use mysql;使用mysql库
+show columns from user;user表
+show indexfrom user;user表索引
+
+create database xuqian;
+
+CREATE TABLE runoob_tbl(
+	 runoob_id INT NOT NULL AUTO_INCREMENT,
+	 runoob_title VARCHAR(100) NOT NULL,
+	 runoob_author VARCHAR(40) NOT NULL,
+	 submission_date DATE,
+	 PRIMARY KEY ( runoob_id )
+ )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO runoob_tbl
+(runoob_title, runoob_author, submission_date)
+VALUES
+("学习 MySQL", "菜鸟教程", NOW());
